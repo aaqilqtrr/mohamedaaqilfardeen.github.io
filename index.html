@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohamed Aaqil Fardeen | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --text:#eaeaea;
+      --muted:#bdbdbd;
+      --brand1:#f5b461;
+      --brand2:#d8673f;
+      --accent:#ff7b54;
+      --btn:#e0724c;
+      --btnText:#1b1b1b;
+      --card:#101010;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:var(--text);
+      background:var(--bg);
+    }
+    /* NAV */
+    .nav{
+      max-width:1120px;
+      margin:0 auto;
+      padding:20px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .brand{font-weight:800; letter-spacing:.2px; font-size:28px}
+    .brand span{
+      background:linear-gradient(90deg,var(--brand1),var(--brand2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .menu{display:flex; gap:28px; align-items:center}
+    .menu a{
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+      opacity:.85;
+    }
+    .menu a:hover{opacity:1}
+    .cta{
+      background:linear-gradient(90deg,#ffb080,#ff8a57);
+      color:#1a1a1a;
+      font-weight:700;
+      padding:10px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      box-shadow:0 6px 22px rgba(255,138,87,.35);
+    }
+
+    /* HERO */
+    .hero{
+      max-width:1120px;
+      margin:30px auto;
+      padding:24px;
+      min-height:68vh;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:36px;
+      align-items:center;
+    }
+    .title{
+      font-size:64px;
+      line-height:1.05;
+      margin:0 0 12px;
+      font-weight:800;
+    }
+    .title .first{opacity:.9}
+    .title .name{
+      background:linear-gradient(90deg,var(--brand1),var(--brand2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      filter:drop-shadow(0 0 24px rgba(216,103,63,.25));
+    }
+    .subtitle{
+      margin:8px 0 16px;
+      font-weight:600;
+      font-size:20px;
+    }
+    .subtitle .em{color:#ffcaa1}
+    .para{
+      color:var(--muted);
+      line-height:1.7;
+      max-width:620px;
+      margin:0 0 26px;
+    }
+    .actions{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .btn{
+      background:var(--btn);
+      color:var(--btnText);
+      font-weight:800;
+      padding:14px 22px;
+      border-radius:16px;
+      text-decoration:none;
+      box-shadow:0 18px 60px rgba(224,114,76,.35);
+    }
+    .photoWrap{
+      aspect-ratio:1/1;
+      width:min(440px,80%);
+      justify-self:center;
+      border-radius:50%;
+      position:relative;
+      overflow:hidden;
+      box-shadow:
+        0 0 0 10px rgba(255,138,87,.16) inset,
+        0 0 60px rgba(255,123,84,.28),
+        0 0 160px rgba(255,123,84,.18);
+      background:#0c0c0c;
+    }
+    .photoWrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transform:scale(1.06);
+      filter:saturate(1.02) contrast(1.02);
+    }
+    .halo{
+      position:absolute;
+      inset:-18%;
+      border-radius:50%;
+      background:radial-gradient(closest-side, rgba(255,144,99,.35), transparent 70%);
+      pointer-events:none;
+      mix-blend-mode:screen;
+    }
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; text-align:center}
+      .title{font-size:48px}
+      .subtitle{font-size:18px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">Mohamed <span>Aaqil</span> Fardeen</div>
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+      <a class="cta" href="mailto:aaqilqtr2002@email.com">Contact Me</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <section>
+      <h1 class="title"><span class="first">Hi, It's</span> <span class="name">Aaqil</span></h1>
+      <p class="subtitle">
+        I'm a <span class="em">Business Continuity & Data</span> Professional.
+      </p>
+      <p class="para">
+        Certified in <strong>Business Continuity Planning</strong>, <strong>Artificial Intelligence</strong>,
+        <strong>Cybersecurity</strong>, and <strong>Data Privacy</strong>.  
+        I analyze risks, design resilient systems, and create impactful, reliable solutions.
+      </p>
+      <div class="actions">
+        <a class="btn" href="MohamedAaqilFardeen_CV.pdf" target="_blank">Download My CV</a>
+      </div>
+    </section>
+
+    <div class="photoWrap">
+      <img src="assets/aaqil.jpg" alt="Mohamed Aaqil Fardeen">
+      <div class="halo"></div>
+    </div>
+  </main>
+</body>
+</html>
